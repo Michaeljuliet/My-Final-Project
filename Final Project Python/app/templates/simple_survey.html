@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Survey</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        form { text-align: left; }
+        input, select { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Income Spending Survey</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        
+        {{ form.name.label }} {{ form.name() }}<br>
+        {{ form.email.label }} {{ form.email() }}<br>
+        {{ form.age.label }} {{ form.age() }}<br>
+        {{ form.gender.label }} {{ form.gender() }}<br>
+        {{ form.marital_status.label }} {{ form.marital_status() }}<br>
+        {{ form.education.label }} {{ form.education() }}<br>
+        {{ form.employment_status.label }} {{ form.employment_status() }}<br>
+        {{ form.occupation.label }} {{ form.occupation() }}<br>
+        {{ form.income.label }} {{ form.income() }}<br>
+        
+        <h3>Expenses</h3>
+        {{ form.utilities.label }} {{ form.utilities() }}<br>
+        {{ form.shopping.label }} {{ form.shopping() }}<br>
+        {{ form.healthcare.label }} {{ form.healthcare() }}<br>
+        {{ form.entertainment.label }} {{ form.entertainment() }}<br>
+        {{ form.school_fees.label }} {{ form.school_fees() }}<br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
